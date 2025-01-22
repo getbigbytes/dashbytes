@@ -1,0 +1,56 @@
+# Hatch is only used for managing the default environment
+# This file is only needed if you want to use Hatch instead of mamba to manage your environment
+# Also consider installing pyenv to install Python 3.8 which is needed by Snowflake
+
+[project]
+requires-python = "~=3.8"
+name = "wald-stack-demo"
+description = "Demonstrating the WALD-stack on Snowflake"
+readme = "README.md"
+license = { text = "MIT" }
+keywords = [
+  "dbt",
+  "snowflake",
+  "python",
+  "snowpark",
+]
+authors = [
+  { name = "Developers", email = "developers@digi-trans.org" },
+]
+
+[envs.default]
+python = "3.8"
+dependencies = [
+  "dbt-core",
+  "dbt-snowflake",
+  "jupyterlab",
+  "snowflake-snowpark-python[pandas]",
+  "snowflake-connector-python[pandas]",
+]
+[envs.default.scripts]
+cov = "pytest --cov-report=term-missing --cov-config=pyproject.toml --cov=src/hatch_showcase --cov=tests"
+no-cov = "cov --no-cov"
+
+# Linting, stylechecks & black
+[envs.lint]
+python = "310"
+skip-install = true
+dependencies = [
+    "flake8>=4.0.1",
+    "flake8-bugbear>=22.3.23",
+    "flake8-quotes>=3.3.1",
+    "black>=22.3.0",
+    "isort>=5.10.1",
+    "mypy>=0.942",
+]
+[envs.lint.scripts]
+all = [
+    "flake8 .",
+    "black --check --diff .",
+    "isort --check-only --diff .",
+]
+fmt = [
+    "isort .",
+    "black .",
+    "all",
+]
