@@ -1,7 +1,0 @@
-version: 2
-sources:
-  - name: weather
-    database: MY_DB
-    schema: weather
-    tables:
-      - name: cameri
