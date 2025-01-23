@@ -1,0 +1,64 @@
+{
+    "definitions": {
+        "BigbytesNodeConfig": {
+            "allOf": [
+                {
+                    "type": "object",
+                    "properties": {
+                        "meta": {
+                            "$ref": "https://schemas.bigbytes.com/bigbytes/metadata.json#/definitions/BigbytesModelMetadata"
+                        }
+                    }
+                }
+            ]
+        },
+        "BigbytesColumnInfo": {
+            "allOf": [
+                {
+                    "type": "object",
+                    "properties": {
+                        "meta": {
+                            "$ref": "https://schemas.bigbytes.com/bigbytes/metadata.json#/definitions/BigbytesColumnMetadata"
+                        }
+                    }
+                }
+            ]
+        },
+        "BigbytesCompiledModelNode": {
+            "allOf": [
+                {
+                    "type": "object",
+                    "properties": {
+                        "name": {
+                            "type": "string",
+                            "allOf": [
+                                {
+                                    "not": { "enum": ["bigbytes", "ld", ""] }
+                                },
+                                {
+                                    "pattern": "^[^.]*$"
+                                }
+                            ]
+                        },
+
+                        "meta": {
+                            "$ref": "https://schemas.bigbytes.com/bigbytes/metadata.json#/definitions/BigbytesModelMetadata"
+                        },
+                        "config": {
+                            "$ref": "#/definitions/BigbytesNodeConfig"
+                        },
+                        "columns": {
+                            "type": "object",
+                            "additionalProperties": {
+                                "$ref": "#/definitions/BigbytesColumnInfo"
+                            },
+                            "default": {}
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://schemas.bigbytes.com/bigbytes/v12.json"
+}

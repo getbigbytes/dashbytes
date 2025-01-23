@@ -1,0 +1,73 @@
+{
+    "definitions": {
+        "BigbytesNodeConfig": {
+            "allOf": [
+                {
+                    "$ref": "https://schemas.getdbt.com/dbt/manifest/v11.json#/$defs/NodeConfig"
+                },
+                {
+                    "type": "object",
+                    "properties": {
+                        "meta": {
+                            "$ref": "https://schemas.bigbytes.com/bigbytes/metadata.json#/definitions/BigbytesModelMetadata"
+                        }
+                    }
+                }
+            ]
+        },
+        "BigbytesColumnInfo": {
+            "allOf": [
+                {
+                    "$ref": "https://schemas.getdbt.com/dbt/manifest/v11.json#/$defs/ColumnInfo"
+                },
+                {
+                    "type": "object",
+                    "properties": {
+                        "meta": {
+                            "$ref": "https://schemas.bigbytes.com/bigbytes/metadata.json#/definitions/BigbytesColumnMetadata"
+                        }
+                    }
+                }
+            ]
+        },
+        "BigbytesCompiledModelNode": {
+            "allOf": [
+                {
+                    "$ref": "https://schemas.getdbt.com/dbt/manifest/v11.json#/$defs/ModelNode"
+                },
+                {
+                    "type": "object",
+                    "properties": {
+                        "name": {
+                            "type": "string",
+                            "allOf": [
+                                {
+                                    "not": { "enum": ["bigbytes", "ld", ""] }
+                                },
+                                {
+                                    "pattern": "^[^.]*$"
+                                }
+                            ]
+                        },
+
+                        "meta": {
+                            "$ref": "https://schemas.bigbytes.com/bigbytes/metadata.json#/definitions/BigbytesModelMetadata"
+                        },
+                        "config": {
+                            "$ref": "#/definitions/BigbytesNodeConfig"
+                        },
+                        "columns": {
+                            "type": "object",
+                            "additionalProperties": {
+                                "$ref": "#/definitions/BigbytesColumnInfo"
+                            },
+                            "default": {}
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://schemas.bigbytes.com/bigbytes/v11.json"
+}
