@@ -26,7 +26,7 @@ jobs:
         uses: cycjimmy/semantic-release-action@v4
         env:
           GITHUB_TOKEN: ${{ secrets.API_TOKEN_GH }}
-          CLAIRVIEW_NPM_TOKEN: ${{ secrets.CLAIRVIEW_NPM_TOKEN }}
+          BIGBYTES_NPM_TOKEN: ${{ secrets.BIGBYTES_NPM_TOKEN }}
         with:
           semantic_version: 19
           extra_plugins: |
@@ -51,5 +51,5 @@ jobs:
             -X POST \
             -H "Accept: application/vnd.github.v3+json" \
             -H "Authorization: token ${{ secrets.API_TOKEN_GH }}" \
-            -d '{"ref": "main", "inputs": {"clairdash-version": "${{ steps.semantic.outputs.new_release_version }}"}}' \
-            https://api.github.com/repos/clairdash/helm-charts/action/workflows/increment-clairdash-app-version.yml/dispatches
+            -d '{"ref": "main", "inputs": {"bigbytes-version": "${{ steps.semantic.outputs.new_release_version }}"}}' \
+            https://api.github.com/repos/bigbytes/helm-charts/action/workflows/increment-bigbytes-app-version.yml/dispatches

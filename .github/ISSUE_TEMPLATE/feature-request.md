@@ -1,6 +1,6 @@
 ---
 name: Feature request
-about: Suggest an idea for Clairdash!
+about: Suggest an idea for Bigbytes!
 title: ''
 labels: "✨ feature-request"
 assignees: ''

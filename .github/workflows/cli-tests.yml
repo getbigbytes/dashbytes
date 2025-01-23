@@ -67,7 +67,7 @@ jobs:
         env:
           PROJECT_DIR: "./examples/full-jaffle-shop-demo/dbt"
           PROFILES_DIR: "./examples/full-jaffle-shop-demo/profiles"
-          PCLAIRDASH: ${{secrets.PCLAIRDASH}}
+          PBIGBYTES: ${{secrets.PBIGBYTES}}
           PGPASSWORD: ${{secrets.PGPASSWORD}}
           PGPORT: 5432
           PGUSER: postgres
@@ -80,7 +80,7 @@ jobs:
         env:
           PROJECT_DIR: "./examples/full-jaffle-shop-demo/dbt"
           PROFILES_DIR: "./examples/full-jaffle-shop-demo/profiles"
-          PCLAIRDASH: ${{secrets.PCLAIRDASH}}
+          PBIGBYTES: ${{secrets.PBIGBYTES}}
           PGPASSWORD: ${{secrets.PGPASSWORD}}
           PGPORT: 5432
           PGUSER: postgres
@@ -100,11 +100,11 @@ jobs:
         run: yarn warehouses-build
       - name: Build and install packages/cli module
         run: cd packages/cli && yarn build && npm i -g
-      - name: Test clairdash version
+      - name: Test bigbytes version
         run: |
-          clairdash_version=$(clairdash --version)
-          package_version=$(yarn workspace @clairdash/cli versions | grep '@clairdash/cli' | cut -d"'" -f 4)
-          if [ $package_version = $clairdash_version ]; then exit 0 ; else echo "Version mismatch"; exit 1; fi
+          bigbytes_version=$(bigbytes --version)
+          package_version=$(yarn workspace @bigbytes/cli versions | grep '@bigbytes/cli' | cut -d"'" -f 4)
+          if [ $package_version = $bigbytes_version ]; then exit 0 ; else echo "Version mismatch"; exit 1; fi
 
       # Run cypress tests
       - name: Cypress run
@@ -114,7 +114,7 @@ jobs:
           spec: packages/e2e/cypress/cli/**/*
           config: 'baseUrl=${{needs.prepare-preview.outputs.url}}'
         env:
-          CYPRESS_PCLAIRDASH: ${{secrets.PCLAIRDASH}}
+          CYPRESS_PBIGBYTES: ${{secrets.PBIGBYTES}}
           CYPRESS_PGPASSWORD: ${{secrets.PGPASSWORD}}
           CYPRESS_SEED_SCHEMA: jaffle-${{strategy.job-index}}
 

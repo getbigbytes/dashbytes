@@ -1,0 +1,36 @@
+import AutomaticallyDeployChangesGithub from './../snippets/automatically-deploy-your-changes-using-github-action.mdx';
+
+# dbt Projects
+
+You can easily make changes in dbt and see them updated in your Bigbytes project.
+
+:::info
+
+Bigbytes supports dbt v1.4.0 and above. If you are using an older version of dbt, you will need to upgrade to sync
+your project to Bigbytes
+
+:::
+
+---
+
+## 1. Automatically: deploy your changes to Bigbytes using a GitHub action
+
+<AutomaticallyDeployChangesGithub />
+
+## 2. In the UI: Syncing your dbt changes using `refresh dbt`
+
+Whenever you make changes to your YAML files, you can sync Bigbytes and see these changes by clicking the `refresh dbt` button in the Explore view of the app.
+
+![screenshot-refresh-dbt](assets/screenshot-refresh-dbt.png)
+
+If you're using a git connection (like GitHub, Gitlab or Bitbucket), you'll need to push + merge your changes to the branch that your Bigbytes project is connected to before you run `refresh dbt`.
+
+## 3. From the command line: Syncing your dbt changes using `bigbytes deploy`
+
+If you're using the [Bigbytes CLI](/guides/cli/how-to-install-the-bigbytes-cli), you can use the `bigbytes deploy` command to deploy your changes to your Bigbytes project.
+
+To read more about how to use `bigbytes deploy`, [check out our docs](/guides/cli/how-to-use-bigbytes-deploy).
+
+## Note: If you've made any changes to the underlying data, you need to run dbt first
+
+If you've made any changes to the underlying data (for example, adding a new column in your `model.sql` file or changing the SQL logic of an existing dimension), then you need to run: `dbt run -m yourmodel` before you click `refresh dbt` in Bigbytes.

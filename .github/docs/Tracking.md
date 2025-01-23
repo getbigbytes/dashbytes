@@ -6,7 +6,7 @@ We are all data people, so you know we love charts ❤️📊 ...and to build ch
 
 On the client side the events are user driven, on the server side the events are data driven.
 
-### Why does Clairdash want to collect this data?
+### Why does Bigbytes want to collect this data?
 
 On the client side we want to know how the user behaves/interacts with our application.
 
@@ -92,8 +92,8 @@ Example:
 
 ## Server side tracking
 
-In the backend package we have the class `ClairdashAnalytics` to help us track events. Both the class and the types are
-in `packages/backend/src/analytics/ClairdashAnalytics.ts`.
+In the backend package we have the class `BigbytesAnalytics` to help us track events. Both the class and the types are
+in `packages/backend/src/analytics/BigbytesAnalytics.ts`.
 
 ### Event naming convention
 

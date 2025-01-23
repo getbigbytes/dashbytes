@@ -8,8 +8,8 @@ tasks:
   - name: Run migration
     command: |
       gp ports await 5432
-      /workspace/clairdash/scripts/seed-jaffle.sh
-      /workspace/clairdash/scripts/reset-db.sh
+      /workspace/bigbytes/scripts/seed-jaffle.sh
+      /workspace/bigbytes/scripts/reset-db.sh
       gp sync-done migration
 
   - name: Run FE & BE

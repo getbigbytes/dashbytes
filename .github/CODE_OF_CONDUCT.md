@@ -1,4 +1,4 @@
-# Code of Conduct - Clairdash
+# Code of Conduct - Bigbytes
 
 ## Our Pledge
 

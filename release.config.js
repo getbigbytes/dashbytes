@@ -63,8 +63,8 @@ module.exports = {
               "packages/warehouses/package.json",
               "packages/cli/package.json",
             ],
-            from: '"@clairdash/common": "\\^(0|[1-9]\\d*)\\.(0|[1-9]\\d*)\\.(0|[1-9]\\d*)(?:-((?:0|[1-9]\\d*|\\d*[a-zA-Z-][0-9a-zA-Z-]*)(?:\\.(?:0|[1-9]\\d*|\\d*[a-zA-Z-][0-9a-zA-Z-]*))*))?(?:\\+([0-9a-zA-Z-]+(?:\\.[0-9a-zA-Z-]+)*))?"',
-            to: '"@clairdash/common": "^${nextRelease.version}"',
+            from: '"@bigbytes/common": "\\^(0|[1-9]\\d*)\\.(0|[1-9]\\d*)\\.(0|[1-9]\\d*)(?:-((?:0|[1-9]\\d*|\\d*[a-zA-Z-][0-9a-zA-Z-]*)(?:\\.(?:0|[1-9]\\d*|\\d*[a-zA-Z-][0-9a-zA-Z-]*))*))?(?:\\+([0-9a-zA-Z-]+(?:\\.[0-9a-zA-Z-]+)*))?"',
+            to: '"@bigbytes/common": "^${nextRelease.version}"',
             results: [
               {
                 file: "packages/backend/package.json",
@@ -104,8 +104,8 @@ module.exports = {
               "packages/backend/package.json",
               "packages/cli/package.json",
             ],
-            from: '"@clairdash/warehouses": "\\^(0|[1-9]\\d*)\\.(0|[1-9]\\d*)\\.(0|[1-9]\\d*)(?:-((?:0|[1-9]\\d*|\\d*[a-zA-Z-][0-9a-zA-Z-]*)(?:\\.(?:0|[1-9]\\d*|\\d*[a-zA-Z-][0-9a-zA-Z-]*))*))?(?:\\+([0-9a-zA-Z-]+(?:\\.[0-9a-zA-Z-]+)*))?"',
-            to: '"@clairdash/warehouses": "^${nextRelease.version}"',
+            from: '"@bigbytes/warehouses": "\\^(0|[1-9]\\d*)\\.(0|[1-9]\\d*)\\.(0|[1-9]\\d*)(?:-((?:0|[1-9]\\d*|\\d*[a-zA-Z-][0-9a-zA-Z-]*)(?:\\.(?:0|[1-9]\\d*|\\d*[a-zA-Z-][0-9a-zA-Z-]*))*))?(?:\\+([0-9a-zA-Z-]+(?:\\.[0-9a-zA-Z-]+)*))?"',
+            to: '"@bigbytes/warehouses": "^${nextRelease.version}"',
             results: [
               {
                 file: "packages/backend/package.json",

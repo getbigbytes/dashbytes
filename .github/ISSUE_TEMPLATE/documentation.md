@@ -11,6 +11,6 @@ assignees: ''
 
 <!-- More substantial change? Submit the issue below: -->
 
-**Link to existing docs:** <!-- e.g. https://clairdashdocs.digi-trans.org/.... -->
+**Link to existing docs:** <!-- e.g. https://bigbytesdocs.digi-trans.org/.... -->
 
 **Changes?**

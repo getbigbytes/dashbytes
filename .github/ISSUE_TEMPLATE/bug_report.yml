@@ -27,8 +27,8 @@ body:
       attributes:
           label: version
           description:
-              What version of Clairdash were you using when you encountered the
-              bug? (App version is available in the footer of the Clairdash homepage)
+              What version of Bigbytes were you using when you encountered the
+              bug? (App version is available in the footer of the Bigbytes homepage)
           placeholder: v0.1045.0
       validations:
           required: false
@@ -36,7 +36,7 @@ body:
       id: cloud
       attributes:
           label: Cloud or self-hosting
-          description: Did you get this bug on Clairdash cloud or self-hosting
+          description: Did you get this bug on Bigbytes cloud or self-hosting
           options:
               - cloud
               - self-hosting

@@ -14,7 +14,7 @@ services:
     dockerfilePath: docker/Dockerfile.headless-browser
   - type: web
     env: docker
-    name: clairdash
+    name: bigbytes
     plan: standard
     dockerContext: .
     dockerfilePath: dockerfile-prs
@@ -41,7 +41,7 @@ services:
         fromDatabase:
           name: jaffle_db_pg_13
           property: password
-      - key: CLAIRDASH_SECRET
+      - key: BIGBYTES_SECRET
         generateValue: true
       - key: SECURE_COOKIES
         value: true

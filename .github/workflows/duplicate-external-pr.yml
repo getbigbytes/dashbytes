@@ -12,7 +12,7 @@ jobs:
               uses: tspascoal/get-user-teams-membership@v3
               with:
                   username: ${{ github.event.comment.user.login }}
-                  organization: clairdash
+                  organization: bigbytes
                   team: engineering
                   GITHUB_TOKEN: ${{ secrets.API_TOKEN_GH }}
             - name: Stop workflow if user isn't a member

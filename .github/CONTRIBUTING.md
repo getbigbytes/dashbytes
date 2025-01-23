@@ -5,15 +5,15 @@
 -   Contributing:
     -   [Report a bug](#how-to-report-a-bug)
     -   [Request a feature](#how-to-request-a-new-feature)
-    -   [Contribute code](#how-to-contribute-code-to-clairdash)
+    -   [Contribute code](#how-to-contribute-code-to-bigbytes)
 -   [Opening a Pull Request](#opening-a-pull-request)
 -   [Setup Development Environment](#setup-development-environment)
--   [Join The Clairdash Team](#join-the-clairdash-team)
+-   [Join The Bigbytes Team](#join-the-bigbytes-team)
 
 ## Code of Conduct
 
 This project and everyone participating in it is governed by the
-[Clairdash Code of Conduct](https://github.com/clairview/clairdash/blob/main/.github/CODE_OF_CONDUCT.md).
+[Bigbytes Code of Conduct](https://github.com/getbigbytes/bigbytes/blob/main/.github/CODE_OF_CONDUCT.md).
 By participating, you are expected to uphold this code. Please report unacceptable behavior
 to <support@digi-trans.org>.
 
@@ -21,10 +21,10 @@ to <support@digi-trans.org>.
 
 Useful resources for answering your questions:
 
--   [Documentation](https://clairdashdocs.digi-trans.org)
--   [Issues](https://github.com/clairview/clairdash/issues)
+-   [Documentation](https://bigbytesdocs.digi-trans.org)
+-   [Issues](https://github.com/getbigbytes/bigbytes/issues)
 
-If you cannot find an answer to your question then please join our [slack community](https://clairdash-community.slack.com/join/shared_invite/zt-1busg6781-EgwQ6sPLAK3~QU7GA3ttzQ#/shared-invite/email) and head for the `#help` channel.
+If you cannot find an answer to your question then please join our [slack community](https://bigbytes-community.slack.com/join/shared_invite/zt-1busg6781-EgwQ6sPLAK3~QU7GA3ttzQ#/shared-invite/email) and head for the `#help` channel.
 
 ## How to report a bug
 
@@ -32,7 +32,7 @@ If you cannot find an answer to your question then please join our [slack commun
 
 We use GitHub issues to track bugs and errors. If you run into an issue with the project:
 
--   Open an [Issue](https://github.com/clairview/clairdash/issues/new). (Since we can't be sure at this point whether it
+-   Open an [Issue](https://github.com/getbigbytes/bigbytes/issues/new). (Since we can't be sure at this point whether it
     is a bug or not, we ask you not to talk about a bug yet and not to label the issue.)
 -   Explain the behavior you would expect and the actual behavior.
 -   Please provide as much context as possible and describe the _reproduction steps_ that someone else can follow to
@@ -41,7 +41,7 @@ We use GitHub issues to track bugs and errors. If you run into an issue with the
 
 ## How to request a new feature
 
-Enhancement suggestions are tracked as [GitHub issues](https://github.com/clairview/clairdash/issues).
+Enhancement suggestions are tracked as [GitHub issues](https://github.com/getbigbytes/bigbytes/issues).
 
 -   Use a **clear and descriptive title** for the issue to identify the suggestion.
 -   Provide a **step-by-step description of the suggested enhancement** in as many details as possible.
@@ -49,12 +49,12 @@ Enhancement suggestions are tracked as [GitHub issues](https://github.com/clairv
     you can also tell which alternatives do not work for you.
 -   You may want to **include screenshots and animated GIFs** which help you demonstrate the steps or point out the part
     which the suggestion is related to.
--   **Explain why this enhancement would be useful** to most Clairdash users. You may also want to point out the other
+-   **Explain why this enhancement would be useful** to most Bigbytes users. You may also want to point out the other
     projects that solved it better and which could serve as inspiration.
 
 ## Opening a Pull Request
 
-Clairdash is a community project, so Pull Requests are always welcome, but, before working on a large change, it is best
+Bigbytes is a community project, so Pull Requests are always welcome, but, before working on a large change, it is best
 to open an issue first to discuss it with the maintainers.
 
 When in doubt, keep your Pull Requests small. To give a Pull Request the best chance of getting accepted, don't bundle
@@ -64,9 +64,9 @@ more than one feature or bug fix per Pull Request. It's often best to create two
 2. Clone the fork to your local machine and add upstream remote:
 
 ```sh
-git clone https://github.com/<your username>/clairdash.git
-cd clairdash
-git remote add upstream https://github.com/clairview/clairdash.git
+git clone https://github.com/<your username>/bigbytes.git
+cd bigbytes
+git remote add upstream https://github.com/getbigbytes/bigbytes.git
 ```
 
 <!-- #default-branch-switch -->
@@ -96,7 +96,7 @@ git checkout -b my-topic-branch
 git push -u origin HEAD
 ```
 
-7. Go to [the repository](https://github.com/clairview/clairdash/pulls) and make a Pull Request.
+7. Go to [the repository](https://github.com/getbigbytes/bigbytes/pulls) and make a Pull Request.
 
 The core team is monitoring for Pull Requests. We will review your Pull Request and either merge it, request changes to
 it, or close it with an explanation.
@@ -168,7 +168,7 @@ Once connected run the following commands in the VS Code terminal:
 yarn workspace backend migrate
 yarn workspace backend seed
 
-# Run Clairdash frontend and backend in dev mode
+# Run Bigbytes frontend and backend in dev mode
 yarn dev
 ```
 
@@ -177,8 +177,8 @@ yarn dev
 Alternatively you can create a developer environment using docker compose:
 
 ```shell
-# Clone the Clairdash repo
-git clone https://github.com/clairview/clairdash
+# Clone the Bigbytes repo
+git clone https://github.com/getbigbytes/bigbytes
 ```
 
 Copy `.env.development` into a new file called `.env.development.local` and run the following `docker compose up` command:
@@ -187,14 +187,14 @@ Copy `.env.development` into a new file called `.env.development.local` and run 
 # Create docker containers
 # Note: before the next step make sure your docker has 4GB of memory ( Docker -> settings -> resources ) you should be able to manipulate the values here.
 
-docker compose -p clairdash-app -f docker/docker-compose.dev.yml --env-file .env.development.local up --detach --remove-orphans
+docker compose -p bigbytes-app -f docker/docker-compose.dev.yml --env-file .env.development.local up --detach --remove-orphans
 ```
 
 When ready, access the development container and run these commands:
 
 ```shell
 # Connect to container
-docker exec -it clairdash-app-clairdash-dev-1 bash
+docker exec -it bigbytes-app-bigbytes-dev-1 bash
 
 # Skip puppeteer download
 export PUPPETEER_SKIP_DOWNLOAD=true
@@ -207,9 +207,9 @@ export PUPPETEER_SKIP_DOWNLOAD=true
 
 # Setup the database
 ./scripts/migrate.sh
-./scripts/seed-clairdash.sh
+./scripts/seed-bigbytes.sh
 
-# Run Clairdash frontend and backend in dev mode
+# Run Bigbytes frontend and backend in dev mode
 # yarn dev # http://localhost:3000
 
 # Log in dev mode
@@ -235,18 +235,18 @@ Notes:
 When you want to stop:
 
 ```shell
-docker compose -p clairdash-app -f docker/docker-compose.dev.yml --env-file .env.development.local stop
+docker compose -p bigbytes-app -f docker/docker-compose.dev.yml --env-file .env.development.local stop
 ```
 
 When you want to start:
 
 ```shell
-docker compose -p clairdash-app -f docker/docker-compose.dev.yml --env-file .env.development.local start
+docker compose -p bigbytes-app -f docker/docker-compose.dev.yml --env-file .env.development.local start
 ```
 
 #### Setup Development Environment without Docker
 
-To setup Development Environment without Docker you need following pre-requisites before running Clairdash:
+To setup Development Environment without Docker you need following pre-requisites before running Bigbytes:
 
 -   node >= v18.x (20 is preferred)
 -   yarn
@@ -277,8 +277,8 @@ brew tap dbt-labs/dbt
 brew install dbt-postgres@1.5.4
 
 # 6 Clone the repo and open it in your IDE
-git clone https://github.com/clairview/clairdash.git
-cd clairdash
+git clone https://github.com/getbigbytes/bigbytes.git
+cd bigbytes
 
 # 7 Copy `.env.development` to `.env.development.local`
 cp .env.development .env.development.local
@@ -287,7 +287,7 @@ cp .env.development .env.development.local
 open .env.development.local -t
 
 # 8.1 You may need to edit the following variables:
-PCLAIRDASH=localhost
+PBIGBYTES=localhost
 PGPORT=5432
 PGUSER=pg_user *OR* machine username if no prior postgres set up
 PGPASSWORD=pg_password *OR* blank if no prior postgres set up
@@ -301,7 +301,7 @@ yarn
 yarn load:env ./scripts/build.sh
 yarn load:env ./scripts/seed-jaffle.sh
 yarn load:env ./scripts/migrate.sh
-yarn load:env ./scripts/seed-clairdash.sh
+yarn load:env ./scripts/seed-bigbytes.sh
 
 # Run
 yarn load:env yarn dev
@@ -346,7 +346,7 @@ yarn e2e-run
 
 Note:
 
--   Edit `packages/e2e/cypress.json` if you're running Clairdash on a different domain/port than `http://localhost:8080`
+-   Edit `packages/e2e/cypress.json` if you're running Bigbytes on a different domain/port than `http://localhost:8080`
 
 #### How to check code quality
 
@@ -368,21 +368,21 @@ yarn workspace backend run tsoa routes
 ### Running headless browser locally
 
 Headless browser is used to generate images we use for Slack unfurls or on scheduled deliveries,
-you can find more about headless browser on [our docs](https://clairdashdocs.digi-trans.org/self-host/customize-deployment/enable-headless-browser-for-clairdash).
+you can find more about headless browser on [our docs](https://bigbytesdocs.digi-trans.org/self-host/customize-deployment/enable-headless-browser-for-bigbytes).
 
 If you want to debug some of these features, you should run headless browser locally on docker.
 
-#### Running Clairdash on docker and headless browser
+#### Running Bigbytes on docker and headless browser
 
-If you are running both Clairdash and Headless browser using our docker-compose yml set-up you should be ok, and everything should work as expected.
+If you are running both Bigbytes and Headless browser using our docker-compose yml set-up you should be ok, and everything should work as expected.
 
-#### Running Clairdash without docker and headless browser on Linux
+#### Running Bigbytes without docker and headless browser on Linux
 
-If you are running clairdash without docker, you will have to run headless browser in a way that it is able to connect
-to your clairdash endpoint in localhost. You can achive this on Linux by doing:
+If you are running bigbytes without docker, you will have to run headless browser in a way that it is able to connect
+to your bigbytes endpoint in localhost. You can achive this on Linux by doing:
 
 ```shell
-docker run -e PORT=3001 --name=clairdash-headless --network 'host' -it --rm browserless/chrome
+docker run -e PORT=3001 --name=bigbytes-headless --network 'host' -it --rm browserless/chrome
 ```
 
 Then make sure to configure the following ENV variables:
@@ -393,27 +393,27 @@ export HEADLESS_BROWSER_PORT=3001
 export SITE_URL=http://localhost:3000
 ```
 
-#### Running Clairdash without docker and headless browser on Mac
+#### Running Bigbytes without docker and headless browser on Mac
 
-If you are running Clairdash without docker on Mac, you will have to run docker and create an special host to reach
-clairdash because it can't use localhost.
+If you are running Bigbytes without docker on Mac, you will have to run docker and create an special host to reach
+bigbytes because it can't use localhost.
 
 ```shell
-docker run -e PORT=3001 -p 3001:3001 --name=clairdash-headless --add-host=clairdash-dev:host-gateway -it --rm browserless/chrome
+docker run -e PORT=3001 -p 3001:3001 --name=bigbytes-headless --add-host=bigbytes-dev:host-gateway -it --rm browserless/chrome
 ```
 
 Make sure to add the following line to your `/etc/hosts` file:
 
 ```
-127.0.0.1 clairdash-dev
+127.0.0.1 bigbytes-dev
 ```
 
-Then headless browser should be able to reach clairdash on `http://clairdash-dev:3000`
+Then headless browser should be able to reach bigbytes on `http://bigbytes-dev:3000`
 
 So make sure to configure the following ENV variables:
 
 ```shell
 export HEADLESS_BROWSER_HOST='localhost'
 export HEADLESS_BROWSER_PORT=3001
-export SITE_URL=http://clairdash-dev:3000
+export SITE_URL=http://bigbytes-dev:3000
 ```

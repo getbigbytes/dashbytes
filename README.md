@@ -1,6 +1,6 @@
 
 
-<p align="center">Clairdash, the Looker alternative.</p>
+<p align="center">Bigbytes, the Looker alternative.</p>
 
 <br>
 

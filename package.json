@@ -1,6 +1,6 @@
 {
-    "name": "clairdash",
-    "version": "0.1387.0",
+    "name": "bigbytes",
+    "version": "0.0.1",
     "main": "index.js",
     "license": "MIT",
     "private": true,
@@ -47,13 +47,13 @@
         "typescript": "^4.9.5"
     },
     "scripts": {
-        "common-dev": "yarn workspace @clairdash/common dev",
-        "common-build": "yarn workspace @clairdash/common build",
-        "common-lint": "yarn workspace @clairdash/common lint",
-        "common-format": "yarn workspace @clairdash/common format",
-        "common-fix-lint": "yarn workspace @clairdash/common fix-lint",
-        "common-fix-format": "yarn workspace @clairdash/common fix-format",
-        "common-test": "yarn workspace @clairdash/common test",
+        "common-dev": "yarn workspace @bigbytes/common dev",
+        "common-build": "yarn workspace @bigbytes/common build",
+        "common-lint": "yarn workspace @bigbytes/common lint",
+        "common-format": "yarn workspace @bigbytes/common format",
+        "common-fix-lint": "yarn workspace @bigbytes/common fix-lint",
+        "common-fix-format": "yarn workspace @bigbytes/common fix-format",
+        "common-test": "yarn workspace @bigbytes/common test",
         "backend-dev": "yarn workspace backend dev",
         "backend-build": "yarn workspace backend build",
         "backend-start": "yarn workspace backend start",
@@ -75,19 +75,19 @@
         "e2e-format": "yarn workspace e2e format",
         "e2e-fix-lint": "yarn workspace e2e fix-lint",
         "e2e-fix-format": "yarn workspace e2e fix-format",
-        "cli-test": "yarn workspace @clairdash/cli test",
-        "cli-lint": "yarn workspace @clairdash/cli lint",
-        "cli-format": "yarn workspace @clairdash/cli format",
-        "cli-fix-lint": "yarn workspace @clairdash/cli fix-lint",
-        "cli-fix-format": "yarn workspace @clairdash/cli fix-format",
-        "cli-build": "yarn workspace @clairdash/cli build",
-        "warehouses-dev": "yarn workspace @clairdash/warehouses dev",
-        "warehouses-lint": "yarn workspace @clairdash/warehouses lint",
-        "warehouses-format": "yarn workspace @clairdash/warehouses format",
-        "warehouses-fix-lint": "yarn workspace @clairdash/warehouses fix-lint",
-        "warehouses-fix-format": "yarn workspace @clairdash/warehouses fix-format",
-        "warehouses-test": "yarn workspace @clairdash/warehouses test",
-        "warehouses-build": "yarn workspace @clairdash/warehouses build",
+        "cli-test": "yarn workspace @bigbytes/cli test",
+        "cli-lint": "yarn workspace @bigbytes/cli lint",
+        "cli-format": "yarn workspace @bigbytes/cli format",
+        "cli-fix-lint": "yarn workspace @bigbytes/cli fix-lint",
+        "cli-fix-format": "yarn workspace @bigbytes/cli fix-format",
+        "cli-build": "yarn workspace @bigbytes/cli build",
+        "warehouses-dev": "yarn workspace @bigbytes/warehouses dev",
+        "warehouses-lint": "yarn workspace @bigbytes/warehouses lint",
+        "warehouses-format": "yarn workspace @bigbytes/warehouses format",
+        "warehouses-fix-lint": "yarn workspace @bigbytes/warehouses fix-lint",
+        "warehouses-fix-format": "yarn workspace @bigbytes/warehouses fix-format",
+        "warehouses-test": "yarn workspace @bigbytes/warehouses test",
+        "warehouses-build": "yarn workspace @bigbytes/warehouses build",
         "docs-format": "prettier --ignore-unknown './docs/**/*.{md,mdx}' --check",
         "docs-fix-format": "prettier --ignore-unknown './docs/**/*.{md,mdx}' --write",
         "lint": "run-s common-lint backend-lint frontend-lint e2e-lint cli-lint",
@@ -118,20 +118,20 @@
             "yarn workspace backend formatter --write"
         ],
         "packages/common/src/**/*.(ts|tsx|json)": [
-            "yarn workspace @clairdash/common linter --fix",
-            "yarn workspace @clairdash/common formatter --write"
+            "yarn workspace @bigbytes/common linter --fix",
+            "yarn workspace @bigbytes/common formatter --write"
         ],
         "packages/e2e/cypress/**/*.(ts|json)": [
             "yarn workspace e2e linter --fix",
             "yarn workspace e2e formatter --write"
         ],
         "packages/cli/src/**/*.(ts|tsx|json)": [
-            "yarn workspace @clairdash/cli linter --fix",
-            "yarn workspace @clairdash/cli formatter --write"
+            "yarn workspace @bigbytes/cli linter --fix",
+            "yarn workspace @bigbytes/cli formatter --write"
         ],
         "packages/warehouses/src/**/*.(ts|tsx|json)": [
-            "yarn workspace @clairdash/warehouses linter --fix",
-            "yarn workspace @clairdash/warehouses formatter --write"
+            "yarn workspace @bigbytes/warehouses linter --fix",
+            "yarn workspace @bigbytes/warehouses formatter --write"
         ]
     }
 }

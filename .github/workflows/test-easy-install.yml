@@ -25,7 +25,7 @@
 #        if [ $exited_containers = '0' ]; then exit 0 ; else echo "Some containers are not running"; docker compose -f docker-compose.yml ps ;docker compose -f docker-compose.yml logs; exit 1; fi
 #    - name: Test frontend
 #      run: |
-#        output=$(curl -s http://localhost:8080 | grep "Clairdash - Explore and visualize your team's analytics and metrics." |  wc -l)
+#        output=$(curl -s http://localhost:8080 | grep "Bigbytes - Explore and visualize your team's analytics and metrics." |  wc -l)
 #        if [ $output = '1' ]; then exit 0 ; else echo "Frontend is not running"; exit 1; fi
 #    - name: Test backend
 #      run: |
