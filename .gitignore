@@ -72,4 +72,4 @@ dangerfile.development.ts
 # Charts as code
 bigbytes
 
-bigbytes.zip
+archive/*
