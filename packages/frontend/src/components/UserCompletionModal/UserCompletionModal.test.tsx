@@ -87,7 +87,7 @@ describe('UserCompletionModal', () => {
             user: {
                 isSetupComplete: false,
                 organizationName: '',
-                email: 'demo@digi-trans.org',
+                email: 'demo@getbigbytes.com',
             },
         });
 
@@ -97,7 +97,7 @@ describe('UserCompletionModal', () => {
         expect(welcomeModal).toBeInTheDocument();
 
         const emailDomainCheckbox = await screen.findByRole('checkbox', {
-            name: `Allow users with @digi-trans.org to join the organization as a viewer`,
+            name: `Allow users with @getbigbytes.com to join the organization as a viewer`,
         });
         expect(emailDomainCheckbox).toBeInTheDocument();
     });
@@ -153,7 +153,7 @@ describe('UserCompletionModal', () => {
             user: {
                 isSetupComplete: false,
                 organizationName: '',
-                email: 'demo@digi-trans.org',
+                email: 'demo@getbigbytes.com',
             },
             health: {
                 mode: BigbytesMode.DEFAULT,
@@ -184,7 +184,7 @@ describe('UserCompletionModal', () => {
 
         // uncheck email domain checkbox (checked by default)
         const emailDomainCheckbox = await screen.findByRole('checkbox', {
-            name: `Allow users with @digi-trans.org to join the organization as a viewer`,
+            name: `Allow users with @getbigbytes.com to join the organization as a viewer`,
         });
         expect(emailDomainCheckbox).toBeInTheDocument();
         expect(emailDomainCheckbox).toBeChecked();
@@ -250,7 +250,7 @@ describe('UserCompletionModal', () => {
 
         // email domain checkbox should not be visible
         const emailDomainCheckbox = screen.queryByRole('checkbox', {
-            name: `Allow users with @digi-trans.org to join the organization as a viewer`,
+            name: `Allow users with @getbigbytes.com to join the organization as a viewer`,
         });
         expect(emailDomainCheckbox).not.toBeInTheDocument();
 

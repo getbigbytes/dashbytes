@@ -24,7 +24,7 @@ const markdownSample = `### Bigbytes is an analytics platform for your dbt proje
 
 > we want to enable everybody in your company to answer their own questions using data.
 
-Have any questions? Feel free to send us a message at support@digi-trans.org. Or, just talk to the bot on this page - he may not have the answers to life's great questions, but he'll get you in touch with the right people.
+Have any questions? Feel free to send us a message at support@getbigbytes.com. Or, just talk to the bot on this page - he may not have the answers to life's great questions, but he'll get you in touch with the right people.
 `;
 
 const markdownRevenue = `Charts related to our Jaffle Shop's revenue.`;

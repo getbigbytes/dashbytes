@@ -3,7 +3,7 @@ import { BigbytesConfig, SmtpConfig } from '../../config/parseConfig';
 export const passwordResetLinkMock = {
     code: 'code',
     expiresAt: new Date(),
-    email: 'demo@digi-trans.org',
+    email: 'demo@getbigbytes.com',
     url: 'htt://localhost:3000/reset-password/code',
     isExpired: false,
 };

@@ -23,7 +23,7 @@ describe('Bigbytes API', () => {
             expect(resp.status).to.eq(200);
             expect(resp.body.results).to.have.property(
                 'email',
-                'demo@digi-trans.org',
+                'demo@getbigbytes.com',
             );
         });
     });
@@ -291,7 +291,7 @@ describe('Bigbytes API forbidden tests', () => {
             expect(resp.status).to.eq(200);
             expect(resp.body.results).to.have.property(
                 'email',
-                'another@digi-trans.org',
+                'another@getbigbytes.com',
             );
         });
     });

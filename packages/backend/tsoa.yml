@@ -9,7 +9,7 @@ spec:
         Before you get started, you might need to create a Personal Access Token to authenticate via the API. You can create a token by following this guide: https://docs.bigbytes.com/references/personal_tokens
     contact:
         name: Bigbytes Support
-        email: support@digi-trans.org
+        email: support@getbigbytes.com
         url: 'https://docs.bigbytes.com/help-and-contact/contact/contact_info/'
     license: MIT
     tags:

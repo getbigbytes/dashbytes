@@ -8,7 +8,7 @@ export function mockUserResponse(
 ): BigbytesUserWithAbilityRules {
     return {
         userUuid: 'b264d83a-9000-426a-85ec-3f9c20f368ce',
-        email: 'demo@digi-trans.org',
+        email: 'demo@getbigbytes.com',
         firstName: 'Moh',
         lastName: 'Bench',
         organizationUuid: '172a2270-000f-42be-9c68-c4752c23ae51',

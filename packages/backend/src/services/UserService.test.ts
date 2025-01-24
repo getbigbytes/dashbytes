@@ -107,7 +107,7 @@ describe('UserService', () => {
         jest.clearAllMocks();
     });
     test('should return email and no sso (default case)', async () => {
-        expect(await userService.getLoginOptions('test@digi-trans.org')).toEqual(
+        expect(await userService.getLoginOptions('test@getbigbytes.com')).toEqual(
             {
                 forceRedirect: false,
                 redirectUri: undefined,
@@ -124,7 +124,7 @@ describe('UserService', () => {
             },
         });
 
-        expect(await service.getLoginOptions('test@digi-trans.org')).toEqual({
+        expect(await service.getLoginOptions('test@getbigbytes.com')).toEqual({
             forceRedirect: false,
             redirectUri: undefined,
             showOptions: [],
@@ -148,7 +148,7 @@ describe('UserService', () => {
             },
         });
 
-        expect(await service.getLoginOptions('test@digi-trans.org')).toEqual({
+        expect(await service.getLoginOptions('test@getbigbytes.com')).toEqual({
             forceRedirect: true,
             redirectUri:
                 'https://test.bigbytes.cloud/api/v1/login/okta?login_hint=test%40bigbytes.com',
@@ -173,7 +173,7 @@ describe('UserService', () => {
             },
         });
 
-        expect(await service.getLoginOptions('test@digi-trans.org')).toEqual({
+        expect(await service.getLoginOptions('test@getbigbytes.com')).toEqual({
             forceRedirect: false,
             redirectUri: undefined,
             showOptions: ['email'],
@@ -200,7 +200,7 @@ describe('UserService', () => {
             },
         });
 
-        expect(await service.getLoginOptions('test@digi-trans.org')).toEqual({
+        expect(await service.getLoginOptions('test@getbigbytes.com')).toEqual({
             forceRedirect: true,
             redirectUri:
                 'https://test.bigbytes.cloud/api/v1/login/okta?login_hint=test%40bigbytes.com',
@@ -221,7 +221,7 @@ describe('UserService', () => {
             },
         });
 
-        expect(await service.getLoginOptions('test@digi-trans.org')).toEqual({
+        expect(await service.getLoginOptions('test@getbigbytes.com')).toEqual({
             forceRedirect: false,
             redirectUri: undefined,
             showOptions: ['google'],
@@ -256,7 +256,7 @@ describe('UserService', () => {
             },
         });
 
-        expect(await service.getLoginOptions('test@digi-trans.org')).toEqual({
+        expect(await service.getLoginOptions('test@getbigbytes.com')).toEqual({
             forceRedirect: false,
             redirectUri: undefined,
             showOptions: ['email', 'google', 'azuread', 'oneLogin', 'okta'],
@@ -292,7 +292,7 @@ describe('UserService', () => {
             },
         });
 
-        expect(await service.getLoginOptions('test@digi-trans.org')).toEqual({
+        expect(await service.getLoginOptions('test@getbigbytes.com')).toEqual({
             forceRedirect: false,
             redirectUri: undefined,
             showOptions: ['google', 'azuread', 'oneLogin', 'okta'],

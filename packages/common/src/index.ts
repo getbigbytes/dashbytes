@@ -345,7 +345,7 @@ export const SEED_ORG_1_ADMIN = {
     is_active: true,
 };
 export const SEED_ORG_1_ADMIN_EMAIL = {
-    email: 'demo@digi-trans.org',
+    email: 'demo@getbigbytes.com',
     is_primary: true,
 };
 export const SEED_ORG_1_ADMIN_PASSWORD = {
@@ -366,7 +366,7 @@ export const SEED_ORG_2_ADMIN = {
     is_active: true,
 };
 export const SEED_ORG_2_ADMIN_EMAIL = {
-    email: 'another@digi-trans.org',
+    email: 'another@getbigbytes.com',
     is_primary: true,
 };
 export const SEED_ORG_2_ADMIN_PASSWORD = {

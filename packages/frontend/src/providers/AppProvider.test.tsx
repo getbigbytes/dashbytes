@@ -27,7 +27,7 @@ describe('AppProvider', () => {
             expect(result.current.health.data).toHaveProperty('siteUrl');
             expect(result.current.user.data).toHaveProperty(
                 'email',
-                'demo@digi-trans.org',
+                'demo@getbigbytes.com',
             );
         }).not.toThrow();
     });

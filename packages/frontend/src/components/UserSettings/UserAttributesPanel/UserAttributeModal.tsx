@@ -225,7 +225,7 @@ const UserAttributeModal: FC<{
                                                     : undefined
                                             }
                                             name={`users.${index}.userUuid`}
-                                            placeholder="E.g. test@digi-trans.org"
+                                            placeholder="E.g. test@getbigbytes.com"
                                             required
                                             searchable
                                             {...form.getInputProps(

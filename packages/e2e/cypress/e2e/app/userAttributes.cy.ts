@@ -44,8 +44,8 @@ describe('User attributes sql_filter', () => {
 
         cy.get('input[name="name"]').type('customer_id');
         cy.findByText('Add user').click();
-        cy.findByPlaceholderText('E.g. test@digi-trans.org').type('demo');
-        cy.findByText('demo@digi-trans.org').click();
+        cy.findByPlaceholderText('E.g. test@getbigbytes.com').type('demo');
+        cy.findByText('demo@getbigbytes.com').click();
         cy.get('input[name="users.0.value"]').type('20');
         cy.findByText('Add').click();
         cy.contains('Success');
@@ -134,8 +134,8 @@ describe('User attributes dimension required_attribute', () => {
 
         cy.get('input[name="name"]').type('is_admin');
         cy.findByText('Add user').click();
-        cy.findByPlaceholderText('E.g. test@digi-trans.org').type('demo');
-        cy.findByText('demo@digi-trans.org').click();
+        cy.findByPlaceholderText('E.g. test@getbigbytes.com').type('demo');
+        cy.findByText('demo@getbigbytes.com').click();
         cy.get('input[name="users.0.value"]').type('true');
         cy.findByText('Add').click();
         cy.contains('Success');

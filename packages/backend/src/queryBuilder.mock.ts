@@ -1393,7 +1393,7 @@ ORDER BY "table1_metric1" DESC
 LIMIT 10`;
 
 export const INTRINSIC_USER_ATTRIBUTES: IntrinsicUserAttributes = {
-    email: 'mock@digi-trans.org',
+    email: 'mock@getbigbytes.com',
 };
 
 export const COMPILED_MONTH_NAME_DIMENSION: CompiledDimension = {

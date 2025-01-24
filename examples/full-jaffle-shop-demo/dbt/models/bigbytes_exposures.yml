@@ -4,7 +4,7 @@ exposures:
     type: application
     owner:
       name: Moh Bench
-      email: demo@digi-trans.org
+      email: demo@getbigbytes.com
     label: Bigbytes - Jaffle shop
     description: Bigbytes project
     url: http://localhost:3000/projects/3675b69e-8324-4110-bdca-059031aa8da3/home

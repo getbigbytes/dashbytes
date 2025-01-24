@@ -483,11 +483,11 @@ describe('replaceUserAttributes', () => {
     it('should replace `email` intrinsic user attribute', async () => {
         expect(
             replaceUserAttributes(
-                '${bigbytes.user.email} = "mock@digi-trans.org"',
+                '${bigbytes.user.email} = "mock@getbigbytes.com"',
                 INTRINSIC_USER_ATTRIBUTES,
                 {},
             ),
-        ).toEqual('(\'mock@digi-trans.org\' = "mock@digi-trans.org")');
+        ).toEqual('(\'mock@getbigbytes.com\' = "mock@getbigbytes.com")');
     });
 });
 

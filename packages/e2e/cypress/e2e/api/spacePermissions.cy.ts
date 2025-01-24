@@ -90,7 +90,7 @@ describe('Bigbytes API tests for my own private spaces as admin', () => {
             expect(resp.status).to.eq(200);
             expect(resp.body.results).to.have.property(
                 'email',
-                'demo@digi-trans.org',
+                'demo@getbigbytes.com',
             );
             expect(resp.body.results).to.have.property('role', 'admin');
         });

@@ -12,7 +12,7 @@ describe('Settings - Invites', () => {
         cy.contains('button', 'Add user').scrollIntoView();
         cy.contains('button', 'Add user').click({ force: true });
         cy.findByLabelText('Enter user email address *').type(
-            'demo+marygreen@digi-trans.org',
+            'demo+marygreen@getbigbytes.com',
         );
         cy.contains(/(Generate|Send) invite/).click();
         cy.get('#invite-link-input').then(($input) => {
@@ -28,7 +28,7 @@ describe('Settings - Invites', () => {
         cy.findByPlaceholderText('Your last name').type('Green');
         cy.get('[data-cy="email-address-input"]')
             .should('be.disabled')
-            .should('have.value', 'demo+marygreen@digi-trans.org');
+            .should('have.value', 'demo+marygreen@getbigbytes.com');
         cy.findByPlaceholderText('Your password').type('PasswordMary1').blur();
         cy.get('[data-cy="signup-button"]').click();
         cy.findByTestId('pin-input')
@@ -49,7 +49,7 @@ describe('Settings - Invites', () => {
         cy.findByTestId('org-users-search-input').clear().type('marygreen');
         cy.wait(500);
         cy.get('table')
-            .contains('tr', 'demo+marygreen@digi-trans.org')
+            .contains('tr', 'demo+marygreen@getbigbytes.com')
             .scrollIntoView()
             .find('.tabler-icon-trash')
             .click({ force: true });
@@ -58,6 +58,6 @@ describe('Settings - Invites', () => {
             .findByText('Delete')
             .click();
         cy.findByText('Success! User was deleted.').should('be.visible');
-        cy.findByText('demo+marygreen@digi-trans.org').should('not.exist');
+        cy.findByText('demo+marygreen@getbigbytes.com').should('not.exist');
     });
 });

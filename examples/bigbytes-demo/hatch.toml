@@ -15,7 +15,7 @@ keywords = [
   "snowpark",
 ]
 authors = [
-  { name = "Developers", email = "developers@digi-trans.org" },
+  { name = "Developers", email = "developers@getbigbytes.com" },
 ]
 
 [envs.default]

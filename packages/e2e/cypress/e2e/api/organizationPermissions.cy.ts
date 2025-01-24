@@ -25,7 +25,7 @@ describe('Bigbytes API organization permission tests', () => {
             expect(resp.status).to.eq(200);
             expect(resp.body.results).to.have.property(
                 'email',
-                'another@digi-trans.org',
+                'another@getbigbytes.com',
             );
         });
     });
