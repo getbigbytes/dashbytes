@@ -1,5 +1,5 @@
 const chartOptions = {
-    backgroundColor: '#121212', // Dark background
+    backgroundColor: '#808080', // Grey background
     textStyle: {
         color: '#ffffff' // White text
     },
