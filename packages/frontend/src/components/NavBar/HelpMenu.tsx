@@ -8,7 +8,7 @@ import {
     IconUsers,
 } from '@tabler/icons-react';
 import { type FC } from 'react';
-import { useIntercom } from 'react-use-intercom';
+// import { useIntercom } from 'react-use-intercom';
 import useHealth from '../../hooks/health/useHealth';
 import LargeMenuItem from '../common/LargeMenuItem';
 import MantineIcon from '../common/MantineIcon';
@@ -17,7 +17,7 @@ const HelpMenu: FC = () => {
     const health = useHealth();
     const isCloudCustomer = health.data?.mode === BigbytesMode.CLOUD_BETA;
 
-    const { show: showIntercom } = useIntercom();
+    // const { show: showIntercom } = useIntercom();
 
     return (
         <Menu
@@ -38,12 +38,15 @@ const HelpMenu: FC = () => {
                     <LargeMenuItem
                         onClick={() => {
                             // @ts-ignore
-                            if (window.Pylon) {
-                                // @ts-ignore
-                                window.Pylon('show');
-                            } else {
-                                showIntercom();
-                            }
+                            // @ts-ignore
+                            window.Pylon('show');
+
+                            // if (window.Pylon) {
+                            //     // @ts-ignore
+                            //     window.Pylon('show');
+                            // } else {
+                            //     showIntercom();
+                            // }
                         }}
                         title="Contact support"
                         description="Drop us a message and we’ll get back to you asap!"

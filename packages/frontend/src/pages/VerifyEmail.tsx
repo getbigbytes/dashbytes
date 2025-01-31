@@ -13,7 +13,7 @@ import {
 import { IconCircleCheckFilled } from '@tabler/icons-react';
 import { type FC } from 'react';
 import { useHistory } from 'react-router-dom';
-import { useIntercom } from 'react-use-intercom';
+// import { useIntercom } from 'react-use-intercom';
 import Page from '../components/common/Page/Page';
 import PageSpinner from '../components/PageSpinner';
 import { SuccessIconBounce } from '../components/RegisterForms/ProjectConnectFlow.styles';
@@ -54,7 +54,7 @@ const VerificationSuccess: FC<{
 const VerifyEmailPage: FC = () => {
     const { health } = useApp();
     const { data, isInitialLoading: statusLoading } = useEmailStatus();
-    const { show: showIntercom } = useIntercom();
+    // const { show: showIntercom } = useIntercom();
     const history = useHistory();
 
     if (health.isInitialLoading || statusLoading) {
@@ -75,11 +75,11 @@ const VerifyEmailPage: FC = () => {
                     <VerifyEmailForm />
                 </Card>
                 <Text color="gray.6" ta="center" px="xs">
-                    You need to verify your email to get access to Bigbytes. If
-                    you need help, you can{' '}
-                    <Anchor onClick={() => showIntercom()}>
-                        chat to support here.
-                    </Anchor>
+                    You need to verify your email to get access to Bigbytes.
+                    {/*If you need help, you can{' '}*/}
+                    {/*<Anchor onClick={() => showIntercom()}>*/}
+                    {/*    chat to support here.*/}
+                    {/*</Anchor>*/}
                 </Text>
                 {data && (
                     <VerificationSuccess
